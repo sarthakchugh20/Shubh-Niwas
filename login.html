@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login 01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <script>
+        let loginForm = document.querySelector(".my-form");
+
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+
+            console.log('Email:', email.value);
+            console.log('Password:', password.value);
+            // process and send to API 
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="centering">
+        <form class="my-form">
+            <div class="login-welcome-row">
+
+                <!-- optimize the image in production -->
+                <h1>Log In!</h1>
+            </div>
+            <div class="text-field">
+                <label for="email">Email:</label>
+                <input aria-label="Email" type="email" id="email" name="email" placeholder="Your Email" required>
+                <img alt="Email Icon" title="Email Icon" src="email.svg">
+            </div>
+            <div class="text-field">
+                <label for="password">Password:</label>
+                <input id="password" type="password" aria-label="Password" name="password" placeholder="Your Password"
+                    title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+                <img alt="Password Icon" title="Password Icon" src="key.png">
+            </div>
+            <a class="login-btn" href="chugh.html"> <input type="submit" class="my-form__button" value="Login"> </a>
+            <div class="my-form__actions">
+                <div class="my-form__row">
+                    <span>Did you forget your password?</span>
+                    <a href="#" title="Reset Password">Reset Password</a>
+                </div>
+                <div class="my-form__signup">
+                    <a href="signup.html" title="Create Account">Create Account</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

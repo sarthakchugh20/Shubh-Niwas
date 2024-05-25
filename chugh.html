@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<title>Shubh Niwas - Your Real Estate Solution</title>
+<link rel="stylesheet" href="chugh.css">
+
+<head>
+  <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="Logo"> <img src="LOGO MAIN.png" alt="company logo"> </div>
+      <p> </p>
+      <div class="right">
+        <ul>
+          <li><span><img width="18px" height="18px" src="dashboard.svg"></span>Dashboard</li>
+          <li><span><img width="18px" height="18px" src="home-03.svg"></span>List Property</li>
+          <li><span><img width="18px" height="18px" src="favourite.svg"></span>Saved</li>
+          <li><span><img width="18px" height="18px" src="news.svg"></span>News</li>
+          <li><span><img width="18px" height="18px" src="user.svg"></span><a href="login.html">Log In</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <div class="container">
+    <p> <span> India's only real estate platform with <br> <b>10,000+ highly rated sellers </b> </span></p>
+    <div class="home-search-container">
+      <div class="sleek-tabs">
+        <ul>
+          <li class="buy selected" data-type="buy"><span class="triangle"><b>BUY</b></span></li>
+          <li class="rent" data-type="rent"><span class="triangle"><b>SELL</b></span></li>
+          <li class="agents" data-type="agents"><span class="triangle"><b>RENT</b></span></li>
+        </ul>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            // Get all the sleek tabs
+            var tabs = document.querySelectorAll('.sleek-tabs li');
+
+            // Loop through each tab
+            tabs.forEach(function (tab) {
+              // Add click event listener to each tab
+              tab.addEventListener('click', function () {
+                // Change text color to blue
+                var searchText = document.querySelector('.search-input');
+                searchText.classList.add('blue-text');
+
+                // Generate new placeholder text based on the tab clicked
+                var placeholderText = "";
+                switch (tab.dataset.type) {
+                  case 'buy':
+                    placeholderText = "Choose city to purchase property";
+                    break;
+                  case 'rent':
+                    placeholderText = "Select city to sell your property";
+                    break;
+                  case 'agents':
+                    placeholderText = "Choose your ideal rental location";
+                    break;
+                  default:
+                    placeholderText = "Search for cities to buy, sell or rent properties";
+                }
+
+                // Set the new placeholder text
+                searchText.setAttribute('placeholder', placeholderText);
+              });
+            });
+          });
+        </script>
+
+      </div>
+      <div class="outer-search-box">
+        <div class="multiloclity-search-wrap">
+          <div class="search-wrap">
+            <input type="text" class="search-input" placeholder="Select Cities to Buy, Sell or Rent Properties"
+              id="searchInput">
+            <button class="search-button">Search</button>
+            <div id="cityList" class="city-list">
+              <ul>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Agra, Uttar
+                    Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Ahmedabad,
+                    Gujarat</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Ajmer,
+                    Rajasthan</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Allahabad,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Amritsar,
+                    Punjab</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Aurangabad,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Bangalore,
+                    Karnataka</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Bhopal,
+                    Madhya Pradesh</a></li>
+                <li><a
+                    href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Bhubaneswar,
+                    Odisha</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Chandigarh,
+                    Chandigarh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Chennai,
+                    Tamil Nadu</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Coimbatore,
+                    Tamil Nadu</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Dehradun,
+                    Uttarakhand</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Delhi,
+                    Delhi</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Dhanbad,
+                    Jharkhand</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Faridabad,
+                    Haryana</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Ghaziabad,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Goa,
+                    Goa</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Gurgaon,
+                    Haryana</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Guwahati,
+                    Assam</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Hyderabad,
+                    Telangana</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Indore,
+                    Madhya Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Jaipur,
+                    Rajasthan</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Jammu,
+                    Jammu and Kashmir</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Jamshedpur,
+                    Jharkhand</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Jodhpur,
+                    Rajasthan</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Kanpur,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Kochi,
+                    Kerala</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Kolkata,
+                    West Bengal</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Lucknow,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Ludhiana,
+                    Punjab</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Madurai,
+                    Tamil Nadu</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Mangalore,
+                    Karnataka</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Meerut,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Mumbai,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Nagpur,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Nashik,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Navi
+                    Mumbai, Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Noida,
+                    Uttar Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Patna,
+                    Bihar</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Pune,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Raipur,
+                    Chhattisgarh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Rajkot,
+                    Gujarat</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Ranchi,
+                    Jharkhand</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Salem,
+                    Tamil Nadu</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Shimla,
+                    Himachal Pradesh</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Srinagar,
+                    Jammu and Kashmir</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Surat,
+                    Gujarat</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Thane,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Thrissur,
+                    Kerala</a></li>
+                <li><a
+                    href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Tiruchirappalli,
+                    Tamil Nadu</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Trivandrum,
+                    Kerala</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Udaipur,
+                    Rajasthan</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Vadodara,
+                    Gujarat</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Varanasi,
+                    Uttar Pradesh</a></li>
+                <li><a
+                    href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Vasai-Virar,
+                    Maharashtra</a></li>
+                <li><a href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Vijayawada,
+                    Andhra Pradesh</a></li>
+                <li><a
+                    href="https://www.makaan.com/mumbai-residential-property/buy-property-in-mumbai-city">Visakhapatnam,
+                    Andhra Pradesh</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <script>
+            $(document).ready(function () {
+              $('.search-button').click(function () {
+                var searchText = $('#searchInput').val().toLowerCase();
+                $('#cityList ul li').each(function () {
+                  var cityText = $(this).text().toLowerCase();
+                  if (cityText.includes(searchText)) {
+                    $(this).show();
+                  } else {
+                    $(this).hide();
+                  }
+                });
+              });
+            });
+
+          </script>
+
+          <script>
+
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+              var searchInput = document.getElementById('searchInput');
+              var cityList = document.getElementById('cityList');
+
+              // Show city list when search bar is clicked
+              searchInput.addEventListener('click', function () {
+                cityList.style.display = 'block';
+              });
+
+              // Hide city list when user clicks outside of the search bar or city list
+              document.addEventListener('click', function (event) {
+                var isClickInsideSearchInput = searchInput.contains(event.target);
+                var isClickInsideCityList = cityList.contains(event.target);
+                if (!isClickInsideSearchInput && !isClickInsideCityList) {
+                  cityList.style.display = 'none';
+                }
+              });
+            });
+          </script>
+        </div>
+        <div class="error-message"></div>
+      </div>
+    </div>
+    <a href="https://sarthakchugh20.github.io/sarth/" target="_blank">
+      <center><a href="abc.html" target="_blank"><img class="home-banner" src="Personal_Loan_Desktop_Home.477502a5.png"
+            alt="home banner"></a> </center>
+    </a>
+  </div>
+  <p class="subheading">
+    <center>
+      <div class="cities-head">
+        <div class="main-heading">
+          <h1>Properties to Buy in Top 10 Cities</h1>
+        </div>
+  </p>
+  <center>
+    <a href="properties.html" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="mumbai-1370023_1280.jpg" alt="" data-text="Mumbai">
+        <div class="overlay">
+          <p class="image-text">Mumbai</p>
+          <p class="image-description">Bustling metropolis with diverse real estate options, from luxury skyscrapers to
+            affordable housing.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="properties.html" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="delhi.jpg" alt="" data-text="Delhi">
+        <div class="overlay">
+          <p class="image-text">Delhi</p>
+          <p class="image-description">Capital city offering a mix of commercial and residential properties, ideal for
+            investment.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/amritsar-residential-property/buy-property-in-amritsar-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="golden-temple-5868752_1280.jpg" alt="" data-text="Amritsar">
+        <div class="overlay">
+          <p class="image-text">Amritsar</p>
+          <p class="image-description">Emerging real estate market with cultural charm, attracting both investors and
+            homeowners.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/agra-residential-property/buy-property-in-agra-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="taj-mahal-866692_1280.jpg" alt="" data-text="Agra">
+        <div class="overlay">
+          <p class="image-text">Agra</p>
+          <p class="image-description">Home to iconic landmarks and a growing real estate scene, offering
+            heritage-inspired living.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/jaipur-residential-property/buy-property-in-jaipur-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="hawa-mahal-6156123_1280.jpg" alt="" data-text="jaipur">
+        <div class="overlay">
+          <p class="image-text">Jaipur</p>
+          <p class="image-description">Rich in history and architectural beauty, featuring diverse real estate
+            opportunities for investors.</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.makaan.com/goa-residential-property/buy-property-in-goa-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="goa.jpg" alt="" data-text="goa">
+        <div class="overlay">
+          <p class="image-text">Goa</p>
+          <p class="image-description">Coastal paradise with a thriving real estate market, offering beachfront
+            properties
+            and luxury villas.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/chennai-residential-property/buy-property-in-chennai-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="CHENNAI .jpg" alt="" data-text="chennai">
+        <div class="overlay">
+          <p class="image-text">Chennai</p>
+          <p class="image-description">Growing IT hub with diverse real estate options, including modern apartments and
+            commercial spaces.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/bangalore-residential-property/buy-property-in-bangalore-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="banglore.jpeg" alt="" data-text="banglore">
+        <div class="overlay">
+          <p class="image-text">Banglore</p>
+          <p class="image-description">Tech city with booming real estate, featuring smart homes, innovative office
+            spaces, and vibrant cultural hubs.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/kolkata-residential-property/buy-property-in-kolkata-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="kolkata.jpg" alt="" data-text="kolkata">
+        <div class="overlay">
+          <p class="image-text">Kolkata</p>
+          <p class="image-description">Historic charm meets modern living in Kolkata’s real estate landscape, offering
+            heritage modern developments.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.makaan.com/hyderabad-residential-property/buy-property-in-hyderabad-city" target="_blank">
+      <div class="image-container">
+        <img width="280px" height="180px" src="hyderabad.jpg" alt="" data-text="hyderabad">
+        <div class="overlay">
+          <p class="image-text">Hyderabad</p>
+          <p class="image-description"> Rapidly growing city with diverse real estate options, from tech parks to gated
+            communities.</p>
+        </div>
+      </div>
+    </a>
+  </center>
+
+
+  <div id="card-area">
+    <div class="main-heading2">
+      <h1>Handpicked Projects for You</h1>
+    </div>
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="plots.png" alt="plots">
+          <div class="overlayy">
+            <h3>Featured Plots</h3>
+            <p> <a href="https://www.99acres.com/residential-land-in-mumbai-ffid">Buy Plots in Mumbai</a> <br>
+              <a href="https://www.99acres.com/residential-land-in-delhi-ncr-ffid">Buy Plots in Delhi</a> <br>
+              <a href="https://www.99acres.com/residential-land-in-chennai-ffid">Buy Plots in Chennai</a> <br>
+              <a href="https://www.99acres.com/residential-land-in-kolkata-ffid">Buy Plots in Kolkata</a> <br>
+              <a href="https://www.99acres.com/residential-land-in-bangalore-ffid">Buy Plots in Banglore</a> <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="homes.png" alt="plots">
+          <div class="overlayy">
+            <h3>Independent Homes</h3>
+            <p> <a
+                href="https://www.magicbricks.com/new-projects-Mumbai?mbtracker=google_paid_MH_C_Mumbai&utm_source=marketing_google&utm_medium=cpc&utm_campaign=magic_homes_perf&gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xaZK8VZY4As0-uwHKMsoWoSciPVC_0mkYpEfunEmjGT_z7D2bPABJRoC7t4QAvD_BwE">Purchase
+                Home in Mumbai</a> <br>
+              <a
+                href="https://www.magicbricks.com/new-projects-New-Delhi?mbtracker=google_paid_MH_C_New_Delhi&utm_source=marketing_google&utm_medium=cpc&utm_campaign=magic_homes_perf&gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xZDUuuuZIJMTxdVwtuVUW4vZtpKejqoVIi7DgTUSyej_8UH1TFLvdRoCMmMQAvD_BwE">Purchase
+                Home in Delhi</a> <br>
+              <a
+                href="https://www.magicbricks.com/new-projects-Chennai?mbtracker=google_paid_MH_C_Chennai&utm_source=marketing_google&utm_medium=cpc&utm_campaign=magic_homes_perf&gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xZ2TdnyrtZUEpPwIJ_rWJ30X4WEZbyR8FJa8Pcrooy4J0X49Z3DqNRoC1X8QAvD_BwE">Purchase
+                Home in Chennai</a> <br>
+              <a href="https://www.magicbricks.com/independent-house-for-sale-in-kolkata-pppfs">Purchase Home in
+                Kolkata</a> <br>
+              <a href="https://housing.com/in/buy/bangalore/house-bangalore">Purchase Home in Banglore</a> <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="flats.png" alt="plots">
+          <div class="overlayy">
+            <h3>Luxury Flats</h3>
+            <p> <a
+                href="https://www.nobroker.in/property/sale/mumbai/Mumbai/?searchParam=W3sibGF0IjoxOS4xMjMyNjI2MTEzMzc1LCJsb24iOjcyLjg3NzE3MDcyNjA1MzgsInBsYWNlSWQiOiJDaElKd2UxRVpqREc1enNSYVl4a2pZX3RwRjAiLCJwbGFjZU5hbWUiOiJNdW1iYWkiLCJzaG93TWFwIjpmYWxzZX1d&propType=AP&price=5000000,100000000&orderBy=price,asc&type=BHK2,BHK3,BHK4,BHK4PLUS&utm_source=google&utm_medium=cpc&utm_campaign=Search_Sale_Mumbai_Generic_Acq&adgroup=Generic_Flats&utm_content=flats%20for%20sale%20in%20mumbai&gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xQ_40kz_LGthX6P1TijW-iS1aB_1DN8P1tqGFUl5Fr9bxe9xijz3ZBoCz7sQAvD_BwE">Flats
+                for sale in Mumbai</a> <br>
+              <a
+                href="https://housing.com/in/buy/new_delhi/new_delhi?gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xXDxrZB92mS-KEmJYEqqI87iYHxfr5u57qxd0h7pcu16owYtiFqWlxoCHPQQAvD_BwE">Flats
+                for sale in Delhi</a> <br>
+              <a href="https://www.nobroker.in/flats-for-sale-in-chennai_chennai">Flats for sale in Chennai</a> <br>
+              <a
+                href="https://housing.com/buy-flats-in-kolkata-for-sale-srpid-P40qcmycif4m431jo?paid=true&gad_source=1&gclid=Cj0KCQjw2PSvBhDjARIsAKc2cgP4CoWYL_Alo79-8C0ocWu4elVmfmBFD-P3XurOfuoWivb0hzL-bnwaAuRBEALw_wcB">Flats
+                for sale in Kolkata</a> <br>
+              <a href="https://www.magicbricks.com/flats-in-bangalore-for-sale-pppfs">Flats for sale in Banglore</a>
+              <br>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="grid-heading">
+    <h1>Trending Properties</h1>
+  </div> <br>
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="https://keyahomes.in/">
+        <img src="keya around life.webp" alt="Image 1"> </a>
+      <div class="content">
+        <h2>Keya Life</h2>
+        <h5>by Keya Homes</h5>
+        <p>2, 3, 4 BHK appartments</p>
+        <p1>Whitefield, East Banglore</p1>
+        <p2>Starting from 1.2 Cr</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.viceroyproperties.in/">
+        <img src="amrutha_platinum_towers-whitefield-bengaluru-amrutha_rama_constructions_pvt_ltd.webp" alt="Image 2">
+      </a>
+      <div class="content">
+        <h2>The Viceroy</h2>
+        <h5>by Viceroy Properties LLP</h5>
+        <p>5, 6 BHK appartments</p>
+        <p1>Nariman Point, Mumbai</p1>
+        <p2>Starting from 3.5 Cr</p2>
+        <p></p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.theamaryllis.in/">
+        <img src="sumadhura_folium_phase_2-whitefield-bengaluru-sumadhura_infracon_pvt_ltd.webp" alt="Image 3"> </a>
+      <div class="content">
+        <h2>The Amaryllis</h2>
+        <h5>by Unity Group</h5>
+        <p>Studio appartments</p>
+        <p1>Karol Bagh, New Delhi</p1>
+        <p2>Starting from 25 Lakhs</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a
+        href="https://housing.com/in/buy/projects/page/282950-jrc-wild-woods-by-jrc-projects-pvt-ltd-in-gattahalli?fltcnt=a43f0cff-4e36-42d2-94e2-5c053573f867">
+        <img src="jrc_wild_woods-sarjapur_main_road-bengaluru-jrc_projects_pvt_ltd.webp" alt="Image 4"> </a>
+      <div class="content">
+        <h2>The Wild Woods</h2>
+        <h5>by JRC Projects Pvt. Ltd.</h5>
+        <p>2,3 BHK appartments</p>
+        <p1>Gattahalli, South Banglore</p1>
+        <p2>Starting from 1 Cr</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.olympiagroup.in/olympia-opaline/index.html">
+        <img src="hm_indigo-jp_nagar_9th_phase-bengaluru-hm_group.webp" alt="Image 5"> </a>
+      <div class="content">
+        <h2>Olympia Opaline</h2>
+        <h5>by Olympia Group</h5>
+        <p>3, 4, 5 BHK appartments</p>
+        <p1>Navalur, South Chennai</p1>
+        <p2>Starting from 2.4 Cr</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://atsknightsbridge.com/">
+        <img src="ecolife_elements_of_nature_akash_block-balagere-bengaluru-ecolife_developers.webp" alt="Image 6"> </a>
+      <div class="content">
+        <h2>Knights Bridge</h2>
+        <h5>by ATS Greens Group</h5>
+        <p>4, 6 BHK appartments</p>
+        <p1>01/A, Sector 124, Noida</p1>
+        <p2>Starting from 4.7 Cr</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.purples.co.in/melodia.html">
+        <img src="ssvr_niyaara-varthur_bangalore-bengaluru-ssvr_builders.webp" alt="Image 7"> </a>
+      <div class="content">
+        <h2>The Melodia</h2>
+        <h5>by Purple Group</h5>
+        <p>2, 3 BHK appartments</p>
+        <p1>Vaishali Nagar, Jaipur</p1>
+        <p2>Starting from 55 Lakhs</p2>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://housing.com/buy-rosedale-garden-by-rosedale-developers-in-new-town-kolkata-pid-244357">
+        <img src="aadya_heights-budigere_cross-bengaluru-whitewinds_constructions_private_limited.webp" alt="Image 8">
+      </a>
+      <div class="content">
+        <h2>Rosedale Garden</h2>
+        <h5>by Candominium Complex</h5>
+        <p>3, 4, 5 BHK appartments</p>
+        <p1>Uniworld City, Kolkata</p1>
+        <p2>Starting from 80 Lakhs</p2>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="loan-section">
+    <h1>Selected Home Loans</h1>
+  </div>
+
+
+  <div class="loanss">
+    <a href="https://portal.hdfc.com/?ref_code=SEM_ApplyOnline_Desk&utm_medium=Desktop&utm_campaign=SEM&utm_content=D_Brand_Top_Converting_Campaign+Exact_Desktop_New_Repli_NewLP&s_kwcid=AL!13313!3!691589705508!e!!g!!home%20loan%20hdfc&gad_source=1&gclid=Cj0KCQjw8J6wBhDXARIsAPo7QA-JqdvmECL4HBPBFMzChhOjZK-3SqKlHpEVyL7mPuGMaHGSnwLk0roaApE-EALw_wcB"
+      target="_blank"><img src="hdfc loans.jpg_large" alt="HDFC Loans"></a>
+    <a href="https://digiloans.bankofmaharashtra.in/apply/homeloan?bom" target="_blank"><img src="bom loans.jpeg"
+        alt="BOM Loans"></a>
+    <a href="https://www.ucobank.com/home-loan" target="_blank"><img src="uco lon.jpeg" alt="UCO Lon"></a>
+    <a href="https://www.pnbindia.in/housing-loan.html" target="_blank"><img src="pnb loasn.jpeg" alt="PNB Loasn"></a>
+    <a href="https://canarabankcsis.in/retail/HomeLoan.aspx" target="_blank"><img src="cnra bank.jpeg"
+        alt="canara Bnk Loan"></a>
+    <a href="https://campaigns.icicibank.com/home-loan-bau-v3/index.html?&gclsrc=aw.ds&utm_source=google-brand&utm_medium=cpc&utm_campaign=icicibank-a2-hl-search-brand-em&utm_content=icici-home-loan-application&utm_term=icici%20home%20loan%20application&utm_lms=google-icicibank-a2-hl-search-brand-em-icici-home-loan-application-icici%20home%20loan%20application&pl=&gad_source=1&gclid=Cj0KCQjw8J6wBhDXARIsAPo7QA_IVbvhfcZDK2jlaHAOks9L50d8Fi6cXc8Uy-8SbT0Pqep9lhECtxAaArFXEALw_wcB"
+      target="_blank"><img src="icici homw loan.png" alt="BOB Loan"></a>
+    <a href="https://www.unionbankofindia.co.in/english/apply-online-home-loan.aspx" target="_blank"><img
+        src="ubi-home-loan-print-ad_english-500x600px.jpg" alt="UBI Home Loan"></a>
+    <a href="https://www.yesbank.in/personal-banking/yes-individual/loans/home-loan" target="_blank"><img
+        src="ys lon.jpeg" alt="YS Lon"></a>
+    <a href="https://tmb.in/loans#Features" target="_blank"><img src="tmb loan.jpg" alt="TMB Loan"></a>
+    <a href="https://boiweb.bankofindia.co.in/may-we-reach-you?p_p_id=com_lead_generation_LeadGenerationPortlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_lead_generation_LeadGenerationPortlet_mvcRenderCommandName=%2Fview%2FintrestedProducts"
+      target="_blank"><img src="Bank of India home loan rates.png" alt="Bank of India Home Loan Rates"></a>
+
+  </div>
+
+  <a href="abc.html" target="_blank"> <button class="loan-button">Click here to find more home loans</button> </a>
+
+
+
+
+
+
+  <div class="blog-section">
+    <h1>Our Latest Blogs</h1>
+  </div>
+  <center>
+    <div class="blogs-container">
+      <div class="blog1">
+        <h3>How to Select an Apartment with a Suitable Floor Plan?</h3>
+        <p>A floor plan is like a map of your house or building. It’s drawn to scale and shows how everything is
+          arranged from above. Floor plans, also called house plans, are crucial in designing buildings. They show how
+          rooms are connected, and where furniture goes, and help you see how the space fits together.</p>
+        <a href="https://www.confident-group.com/blog/how-to-select-an-apartment-with-a-suitable-floor-plan/"
+          target="_blank">Read More</a>
+      </div>
+      <div class="blog2">
+        <h3>The Art of Home Seller Etiquette: Don’t Miss These Tips!</h3>
+        <p>When selling your home, etiquette is crucial for a positive impression on buyers and a successful process.
+          Follow these guidelines for success: Be courteous, maintain cleanliness, and accommodate buyers' schedules.
+          Start implementing these practices today for a smoother selling experience.</p>
+        <a href="https://www.property.com/the-art-of-home-seller-etiquette-dont-miss-these-tips/" target="_blank">Read
+          More</a>
+      </div>
+      <div class="blog3">
+        <h3>Real Estate Investment in India: Trends and Challenges!</h3>
+        <p>Well-informed decision-making is the key to successful real estate investments in India. In India, real
+          estate is as much an emotional investment as a financial one. It comes with tax benefits and a vast
+          appreciation potential, making it a worthwhile legacy to pass on to your progeny. </p>
+        <a href="https://www.krahejarealty.com/blog/real-estate-investment-in-india-trends-opportunities-and-challenges"
+          target="_blank">Read More</a>
+      </div>
+      <div class="blog4">
+        <h3>What are the perks of investing in pre-leased property?</h3>
+        <p>In the dynamic realm of real estate investment, savvy investors pursue innovative strategies to enhance
+          returns and mitigate risks. Pre-leased commercial property investment, gaining traction, melds rental income
+          stability apital appreciation, offering lucrative benefits. .</p>
+        <a href="https://geetanjalihomestate.co.in/blogs/what-are-the-perks-of-investing-in-pre-leased-property"
+          target="_blank">Read More</a>
+      </div>
+  </center>
+  </div>
+
+
+  <h1 class="testimonials">Testimonials</h1>
+  <div class="articles">
+  
+    <article>
+        <figure>
+            <img src="mom.jpeg" alt="Lavender Fields">
+        </figure>
+        <div class="article-preview">
+            <h3>Mrs. Madhu Bala</h3>
+            <p>
+              Shubh Niwas team amazed me with its user-friendly interface and vast property options. Perfect for finding your dream home!
+            </p>
+        </div>
+    </article>
+    <article>
+        <figure>
+            <img src="dad2.jpeg" alt="Lavender Fields">
+        </figure>
+        <div class="article-preview">
+            <h3>Mr. Hitesh Kumar</h3>
+            <p>
+              This website is fantastic! Seamless navigation, great listings. Found my dream home in no time.
+            </p>
+        </div>
+    </article>
+    <article>
+        <figure>
+            <img src="chacha.jpeg" alt="Snowy Mountains">
+        </figure>
+        <div class="article-preview">
+            <h3>Mr. Gaurav Kumar</h3>
+            <p>
+              Shubh Niwas exceeded my expectations. Easy to use, vast property choices. Highly recommend!
+            </p>
+        </div>
+    </article>
+    <article>
+        <figure>
+            <img src="sarthak2.jpeg" alt="Freezing Forest">
+        </figure>
+        <div class="article-preview">
+            <h3>Mr. Sarthak Chugh</h3>
+            <p>
+              This website is a gem! Streamlined interface, diverse listings. Found my ideal home effortlessly.
+            </p>
+        </div>
+    </article>
+</div>
+
+
+
+
+  <img class="tagline" width="600px" height="100px" src="tagline.svg" alt="">
+
+
+
+
+
+
+
+  <div class="footer_section">
+
+    <!--======================================= FOOTER TOP SECTION START =========================== -->
+
+
+
+    <!--======================================= FOOTER TOP SECTION ENDS =========================== -->
+
+    <!--======================================= FOOTER MID SECTION START =========================== -->
+
+    <div class="subscriber_mid">
+
+      <div class="first_para">
+        <div class="footer_logo"><img src="LOGO MAIN.png" alt=""></div>
+        <div class="footer_para">
+          <p> chughsarthak20@gmail.com</p>
+          <p> +91-7988782640</p> <br>
+  
+      
+            <img src="facebook.svg" alt="Facebook">
+     
+        
+        
+            <img src="instagram.svg" alt="Instagram">
+     
+        
+       
+            <img src="youtube.svg" alt="YouTube">
+                
+       
+            <img src="linkedin.svg" alt="LinkedIn">
+                
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="vertical2"></div>
+      <div class="horizontal"></div>
+      <div class="middle_para">
+
+        <div class="footer_About">
+          <h4 class="footer_About_para"><a class="footer_About_head" href="#">About</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="whyshubhniwas.html" target="_blank">Why Shubh Niwas</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="contactus.html" target="_blank">Contact Us</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="ourmission.html" target="_blank">Our Mission</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="feedback.html" target="_blank">Feedback</a></h5>
+
+
+
+        </div>
+
+        <div class="footer_About">
+          <h4 class="footer_About_para"><a class="footer_About_head" href="#">Careers</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">Find Jobs</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">Internships </a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">Student Programs</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">Benefits</a></h5>
+        </div>
+
+        <div class="footer_About">
+          <h4 class="footer_About_para"><a class="footer_About_head" href="#">Explore</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="abc.html" target="_blank">Home Loans</a>
+            </h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">News and Articles</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="" target="_blank">Builders in India</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="faq.html" target="_blank">FAQs</a></h5>
+
+
+        </div>
+
+        <div class="footer_About">
+          <h4 class="footer_About_para"><a class="footer_About_head" href="#">Legal</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="termsofuse.html" target="_blank">Terms of Services</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="privacypolicy.html" target="_blank">Privacy Policy</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="cookiepolicy.html" target="_blank">Cookie Policy</a></h5>
+            <h5 class="footer_About_para"><a class="footer_About_links" href="greivances.html" target="_blank">Grievances</a></h5>
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="vertical"></div>
+      <div class="horizontal2"></div>
+
+      <div class="last_para">
+
+        <div class="footer_last">
+          <p class="quick_signup">Quick Signup</p>
+          <p id="free_daily_updates">Subscribe now for access to our daily newsletter updates</p>
+          <form action="subscribe.html" class="footer_form_mid" method="get" onsubmit="return validateEmail()">
+            <input id="emailInput" class="footer_mid_subscribe_bar" type="text" placeholder="Enter your Email-id: ">
+
+
+
+
+
+            <button class="footer_mid_subscriber_button" type="submit">Subscribe</button>
+          </form> 
+      
+          <script>
+            function validateEmail() {
+                var email = document.getElementById("emailInput").value;
+                if (!email.includes('@')) {
+                    alert("Please enter a valid email address.");
+                    return false; // Prevent form submission
+                }
+                return true; // Allow form submission
+            }
+        </script>
+
+          <img src="play store.png" alt=""> <img src="app store.png" alt="">
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!--======================================= FOOTER MID SECTION ENDS =========================== -->
+
+    <!--======================================= FOOTER LAST SECTION START =========================== -->
+    <div class="subscriber_last">
+
+
+
+
+
+
+      <div class="footer_last_last_para">
+        <p class="copyright2">COPYRIGHT 2024 &#169; All rights reserved</p>
+        <p class="copyright2">ALL Trademark are registered to their respective owners bros</p>
+      </div>
+
+    </div>
+    <!--======================================= FOOTER LAST SECTION ENDS =========================== -->
+
+  </div>
+
+  <!--======================================= MAIN FOOTER ENDS =========================== -->
+
+
+
+
+
+
+</body>
+
+</html>

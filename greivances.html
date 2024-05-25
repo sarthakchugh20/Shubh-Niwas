@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Form</title>
+    <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cormorant+SC:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0258b3; /* Blue background */
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto; /* Center the form vertically */
+        }
+        .container p{
+            text-align: center;
+            font-family: poppins, sans-serif;
+            margin-top: -12px;
+            font-size: 13.5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: normal; /* Non-bold font */
+        }
+        input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle; /* Align checkboxes with text */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green submit button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 18%;
+            display: block; /* Make it a block-level element to occupy full width */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        input[type="submit"]:hover {
+            background-color: #2E8B57; /* Dark green on hover */
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .checkboxes{
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Grievance Form</h2>
+        <p>for Complaints relating to content and Consumer Complaints.</p>
+        <form id="grievanceForm" action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your E-Mail ID:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="contact">Your Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="url">Please share the link (URL) of the Page which you are reporting against:</label>
+            <input type="text" id="url" name="url" required>
+
+         <label class="checkboxes"><strong>Please tell us the reason for your complaint/concern. Choose an option which most closely matches with your concern. If you are unsure which option to choose, please write in the textarea.</strong></label><br> 
+            <input type="checkbox" id="reason1" name="reason" value="belongs_to_another_person">
+            <label for="reason1">Belongs to another person and to which the user does not have any right</label><br>
+
+           
+
+            <input type="checkbox" id="reason3" name="reason" value="harmful_to_child">
+            <label for="reason3">Is harmful to child</label><br>
+
+            <input type="checkbox" id="reason4" name="reason" value="infringes_any_patent">
+            <label for="reason4">Infringes any patent, trademark, copyright or other proprietary rights</label><br>
+
+            <input type="checkbox" id="reason5" name="reason" value="violates_any_law">
+            <label for="reason5">Violates any law for the time being in force</label><br>
+
+           
+
+            <input type="checkbox" id="reason7" name="reason" value="impersonates_another_person">
+            <label for="reason7">Impersonates another person</label><br>
+
+           
+
+            <textarea id="complaint" name="complaint" rows="5" placeholder="Please describe your complaint/concern in detail:" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("grievanceForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var contact = document.getElementById("contact").value;
+            var url = document.getElementById("url").value;
+            var complaint = document.getElementById("complaint").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\d{10}$/;
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                document.getElementById("email").classList.add("error");
+                return;
+            } else {
+                document.getElementById("email").classList.remove("error");
+            }
+
+            if (!phonePattern.test(contact)) {
+                alert("Please enter a valid 10-digit phone number.");
+                document.getElementById("contact").classList.add("error");
+                return;
+            } else {
+                document.getElementById("contact").classList.remove("error");
+            }
+
+            // Change submit button text to "Submitting..."
+            var submitBtn = document.querySelector('input[type="submit"]');
+            submitBtn.value = "Submitting...";
+
+            // If all validations pass, you can proceed with form submission or other actions
+            // For demonstration purposes, alert is shown
+            alert("Your grievance has been submitted successfully!");
+            document.getElementById("grievanceForm").reset();
+            submitBtn.value = "Submit"; // Reset submit button text
+        });
+    </script>
+</body>
+</html>

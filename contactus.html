@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="contactus.css">
+    <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+    <script>
+        function sendMessage() {
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (fullName === '' || email === '' || message === '') {
+                alert("Please fill in all required fields.");
+                return false; // Prevent form submission
+            }
+
+            if (email.indexOf("@") === -1) {
+                alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+
+            var button = document.getElementById("sendButton");
+            button.style.backgroundColor = "green";
+            button.innerHTML = "Sent";
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>Contact Us</h1>
+            <div>
+                <p>
+                    Thank you for considering Shubh Niwas for your real estate needs! Whether you’re
+                    looking to buy, sell, or rent a property, our dedicated team is here to assist you every step of the
+                    way. We value your inquiries and aim to provide prompt and personalized assistance to address your
+                    real estate concerns.</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-1">
+                <div class="address-line">
+                    <img width="29px" height="29px" alt="location" src="location.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Address</div>
+                        <div>A-612, Sankalp Tatvam,</div>
+                        <div>Bad ke Balaji, Jaipur - 302026</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="address-line">
+                    <img width="29px" height="29px" alt="location" src="phone.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Phone</div>
+                        <div>+91-7988782640</div>
+                        <div>+91-9466514425</div>
+                    </div>
+                </div>
+                <div class="address-line">
+                    <img width="29px" height="29px" alt="location" src="email.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Email</div>
+                        <div>shubhniwas@gmail.com</div>
+                        <div>chughsarthak20@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <form onsubmit="return sendMessage()">
+                    <div class="form-container">
+                        <h2>Send Message</h2>
+                        <div class="form-row">
+                            <label>Full Name *</label>
+                            <div>
+                                <input type="text" class="form-field" id="fullName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Email *</label>
+                            <div>
+                                <input type="text" class="form-field" id="email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Type your message *</label>
+                            <div>
+                                <input type="text" class="form-field" id="message">
+                            </div>
+                        </div>
+                        <button id="sendButton" class="send-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

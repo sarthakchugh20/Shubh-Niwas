@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0854a5;
+}
+
+.ln-table-container {
+    width: 1430px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head h1 {
+    margin: 0;
+}
+
+.ln-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ln-table th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.ln-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.ln-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.ln-table a:hover {
+    text-decoration: underline;
+}
+
+.ln-table img{
+    width: 150px;
+   height: 33px;
+}
+.ln-table td{
+    text-align: center;
+    width: 33.33%;
+    font-family: poppins, sans-serif;
+}
+
+.tagline{
+    margin-top: 23px;
+}
+
+.header-nav{
+    background-color: #0854a5;
+    height: 50px;
+}
+
+footer{
+    height: 50px;
+    background-color: #0854a5;
+}
+
+footer p{
+    text-align: center;
+    line-height: 0;
+    margin-top: 30px;
+    margin-left: 28px;
+}
+

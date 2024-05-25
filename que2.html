@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+    <script>
+        function checkPalindrome() {
+    
+            var number = document.getElementById("numberInput").value;
+
+
+            if(number === "") {
+                alert("Please enter a number!");
+                return;
+            }
+
+            var reversedNumber = number.toString().split('').reverse().join('');
+
+
+            if(number === reversedNumber) {
+                document.getElementById("result").innerText = number + " is a palindrome!";
+            } else {
+                document.getElementById("result").innerText = number + " is not a palindrome!";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Palindrome</h1>
+
+<form>
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+
+
+    <button type="button" onclick="checkPalindrome()">Submit</button>
+</form>
+
+
+<p id="result"></p>
+
+</body>
+</html>

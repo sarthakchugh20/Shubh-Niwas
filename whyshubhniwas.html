@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Shubh Niwas</title>
+  <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    .reasons {
+      margin-top: 30px;
+    }
+    .reason {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .reason:last-child {
+      border-bottom: none;
+    }
+    .reason h2 {
+      color: #333;
+    }
+    .reason p {
+      color: #666;
+    }
+    .toggle {
+      display: none;
+    }
+    .toggle:checked + .reason {
+      display: block;
+    }
+    .toggle:checked + .reason {
+      transform: scale(1.05);
+    }
+    .toggle:checked + .reason:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Why Shubh Niwas?</h1>
+  <div class="reasons">
+    <input type="checkbox" id="toggle-1" class="toggle">
+    <div class="reason">
+      <h2>Expertise</h2>
+      <p>With over 20 years of experience in the real estate industry, Shubh Niwas brings unparalleled expertise to every transaction. Our team consists of seasoned professionals who are well-versed in every aspect of the real estate market. Whether you're buying, selling, or investing, you can trust us to provide expert guidance and advice every step of the way.</p>
+    </div>
+    <input type="checkbox" id="toggle-2" class="toggle">
+    <div class="reason">
+      <h2>Customer Service</h2>
+      <p>At Shubh Niwas, customer satisfaction is our top priority. We understand that buying or selling a property can be a daunting task, which is why we go above and beyond to provide exceptional service to all our clients. From the moment you contact us to the closing of the deal and beyond, our dedicated team is here to address your needs and ensure a smooth and hassle-free experience.</p>
+    </div>
+    <input type="checkbox" id="toggle-3" class="toggle">
+    <div class="reason">
+      <h2>Transparency</h2>
+      <p>We believe in transparency and honesty in all our dealings. We understand that real estate transactions involve significant investments, and our clients deserve to have all the information they need to make informed decisions. That's why we strive to provide clear and accurate information about every property and transaction. You can trust Shubh Niwas to be upfront and honest every step of the way.</p>
+    </div>
+    <input type="checkbox" id="toggle-4" class="toggle">
+    <div class="reason">
+      <h2>Quality Properties</h2>
+      <p>Shubh Niwas offers a wide range of high-quality properties tailored to meet the needs and preferences of our clients. Whether you're looking for a cozy apartment in the heart of the city, a luxurious villa by the beach, or a spacious office space for your business, we have something for everyone. We carefully curate our listings to ensure that each property meets our high standards of quality and value.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript can be added here for any dynamic functionality
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting Form</title>
+    <script>
+        function greetUser() {
+            // Get the value from the input field
+            var userName = document.getElementById("userName").value;
+
+            // Check if the userName is empty
+            if(userName === "") {
+                alert("Please enter your name!");
+                return;
+            }
+
+            // Create the greeting message
+            var greetingMessage = "Hello, " + userName + "! Welcome to our website.";
+
+            // Display the greeting message
+            document.getElementById("greetingText").innerText = greetingMessage;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Greeting Form</h2>
+
+<form>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" placeholder="Enter your name">
+
+    <!-- Button to trigger the greeting -->
+    <button type="button" onclick="greetUser()">submit</button>
+</form>
+
+<!-- Display the greeting message here -->
+<p id="greetingText"></p>
+
+</body>
+</html>

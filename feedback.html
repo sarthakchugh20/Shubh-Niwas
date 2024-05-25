@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="feedback.css" />
+    <link rel="icon" href="Screenshot_2024-03-29_at_11.06.26_PM-removebg-preview.png" type="image/x-icon">
+    <title>Feedback | Shubh Niwas</title>
+</head>
+
+<body>
+    <div id="panel" class="panel-container">
+        How satisfied are you with our performance?<br />
+        <p class="subheading">Fill out this form to let us know where to improve.</p>
+        <div class="ratings-container">
+            <div class="rating">
+                <img src="icons8-unhappy-48.png" alt="">
+                <small>Unhappy</small>
+            </div>
+
+            <div class="rating">
+                <img src="icons8-neutral-48.png" alt="" />
+                <small>Neutral</small>
+            </div>
+
+            <div class="rating active">
+                <img src="icons8-smiling-48.png" alt="" />
+                <small>Satisfied</small>
+            </div>
+        </div>
+        <div class="feedback-option">
+            <p>How do you rate the Shubh Niwas website?</p>
+            <label><input type="radio" name="website-feedback" value="Excellent">Excellent</label>
+            <label><input type="radio" name="website-feedback" value="Good">Good</label>
+            <label><input type="radio" name="website-feedback" value="Average">Average</label>
+            <label><input type="radio" name="website-feedback" value="Poor">Poor</label>
+        </div>
+        <div class="feedback-option">
+            <p>How easy was it to find the information you needed?</p>
+            <label><input type="radio" name="information-feedback" value="Very Easy">Very Easy</label>
+            <label><input type="radio" name="information-feedback" value="Easy">Easy</label>
+            <label><input type="radio" name="information-feedback" value="Difficult">Difficult</label>
+            <label><input type="radio" name="information-feedback" value="Very Difficult">Very Difficult</label>
+        </div>
+        <div class="feedback-option">
+            <p>Would you recommend Shubh Niwas to other people?</p>
+            <label><input type="radio" name="recommendation-feedback" value="Never">Never</label>
+            <label><input type="radio" name="recommendation-feedback" value="Not sure">Not sure</label>
+            <label><input type="radio" name="recommendation-feedback" value="Probably yes">Probably yes</label>
+            <label><input type="radio" name="recommendation-feedback" value="Definitely yes">Definitely yes</label>
+        </div>
+        <div class="feedback-option">
+            <p>Any additional comments or suggestions?</p>
+            <textarea id="additional-feedback" rows="4" cols="50" placeholder="Your feedback here"></textarea>
+        </div>
+        <button class="btn" id="send">Send Review</button>
+    </div>
+    <div class="credit">Made with <span style="color:tomato">❤</span> by <a href="chugh.html">Shubh Niwas</a></div>
+    <script>
+
+        const ratings = document.querySelectorAll('.rating')
+        const ratingsContainer = document.querySelector('.ratings-container')
+        const sendBtn = document.querySelector('#send')
+        const panel = document.querySelector('#panel')
+        let selectedRating = 'Satisfied'
+
+        ratingsContainer.addEventListener('click', (e) => {
+            if (e.target.parentNode.classList.contains('rating')) {
+                removeActive()
+                e.target.parentNode.classList.add('active')
+                selectedRating = e.target.nextElementSibling.innerHTML
+            }
+            if (e.target.classList.contains('rating')) {
+                removeActive()
+                e.target.classList.add('active')
+                selectedRating = e.target.nextElementSibling.innerHTML
+            }
+
+        })
+
+        sendBtn.addEventListener('click', (e) => {
+            const websiteFeedback = document.querySelector('input[name="website-feedback"]:checked')
+            const informationFeedback = document.querySelector('input[name="information-feedback"]:checked')
+            const recommendationFeedback = document.querySelector('input[name="recommendation-feedback"]:checked')
+            const additionalFeedback = document.querySelector('#additional-feedback')
+
+            if (!websiteFeedback || !informationFeedback || !recommendationFeedback || !additionalFeedback.value.trim()) {
+                alert("Please fill out all the fields before submitting your feedback.")
+                return;
+            }
+
+            panel.innerHTML = `
+            
+            Thank You!
+            
+            
+            We'll use your feedback to improve our customer support
+        `
+        })
+
+        function removeActive() {
+            for (let i = 0; i < ratings.length; i++) {
+                ratings[i].classList.remove('active')
+            }
+        }
+    </script>
+</body>
+
+</html>
